@@ -1,8 +1,6 @@
 #include <iostream>
 #include "funciones.h"
 using namespace std;
-//jugador1 J1;
-//jugador2 J2;
 const int FILAS = 20;
 const int TESOROS = 4;
 

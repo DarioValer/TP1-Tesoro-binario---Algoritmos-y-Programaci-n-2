@@ -5,11 +5,6 @@ using namespace std;
 const int FILAS = 20;
 const int COLUMNAS = 20;
 
-/*void imprimirTablero(){
-	int matriz[FILAS][COLUMNAS];
-	cout << matriz << endl;
-}*/
-
 void cargarMatriz(char **matriz){
 	char caracter = '-';
 	for(int i = 0; i < COLUMNAS; i++){

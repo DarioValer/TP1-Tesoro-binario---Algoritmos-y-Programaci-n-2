@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 #include "funciones.h"
-//#include "archivo.cpp"
 jugador1 J1;
 jugador2 J2;
 const int TESOROS = 4;
