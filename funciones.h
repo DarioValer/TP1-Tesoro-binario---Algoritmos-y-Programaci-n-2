@@ -16,7 +16,7 @@ void moverTesoro(char ** matrizActual, char ** matrizComparar,int jugador, int t
 void mostrarGanador();
 void ejecutarDeletesJugadores();
 //Archivo
-void imprimirTablero();
+//void imprimirTablero();
 void cargarMatriz(char **matriz);
 void imprimirMatriz(char **matriz);
 int preguntarFila();

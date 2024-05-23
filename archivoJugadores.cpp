@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "funciones.h"
-#include "archivo.cpp"
+//#include "archivo.cpp"
 jugador1 J1;
 jugador2 J2;
 const int TESOROS = 4;
@@ -10,13 +10,13 @@ bool validarTesoro(int jugador,int tesoro){
 	bool respuesta = false;
 	if(jugador == 1){
 		if(tesoro > J1.tesoros || tesoro < 1){
-			cout << "Ingrese un número de Tesoro válido" << endl;
+			cout << "Ingrese un numero de Tesoro valido" << endl;
 		} else {
 			respuesta = true;
 		}
 	} else {
 		if(tesoro > J2.tesoros || tesoro < 1){
-			cout << "Ingrese un número de Tesoro válido" << endl;
+			cout << "Ingrese un numero de Tesoro valido" << endl;
 		} else {
 			respuesta = true;
 		}
@@ -85,7 +85,7 @@ void colocarEspia(char **matrizActual,char **matrizValidar, int turno, int jugad
 			deshabilitarCasilla(matrizActual, matrizValidar, filaEspia, columnaEspia);
 			validacion = true;
 		} else if (encontrarEspia(matrizValidar, filaEspia, columnaEspia)){
-			cout << "Encontraste un espía enemigo" << endl;
+			cout << "Encontraste un espia enemigo" << endl;
 			vaciarCasilla(matrizActual, filaEspia, columnaEspia);
 			vaciarCasilla(matrizValidar, filaEspia, columnaEspia);
 			validacion = true;
@@ -93,7 +93,7 @@ void colocarEspia(char **matrizActual,char **matrizValidar, int turno, int jugad
 			colocarEspiaMatriz(matrizActual, filaEspia, columnaEspia);
 			validacion = true;
 		} else {
-			cout << "No puedes colocar un espía porque ya tienes un espia o tesoro propio aqui"<< endl;
+			cout << "No puedes colocar un espia porque ya tienes un espia o tesoro propio aqui"<< endl;
 		}
 	}
 }
@@ -122,16 +122,16 @@ void moverTesoro(char ** matrizActual, char ** matrizComparar,int jugador, int t
 		int fila =  preguntarFila()-1;
 		int columna = preguntarColumna()-1;
 		if (matrizActual[fila][columna] == deshabilitado){
-			cout << "La casilla está deshabilitada" << endl;
+			cout << "La casilla esta deshabilitada" << endl;
 		} else if(encontrarTesoro(matrizActual, fila, columna)){
 			cout << "No puedes colocar dos Tesoros en una misma casilla" << endl;
 		} else if(encontrarEspia(matrizActual, fila, columna)){
-			cout << "no puedes colocar un Tesoro donde tienes un espía" << endl;
+			cout << "no puedes colocar un Tesoro donde tienes un espia" << endl;
 		} else if(encontrarTesoro(matrizComparar, fila, columna)){
-			cout << "Hay un tesoro enemigo en esta casilla, elija otra fila y columna para el Tesoro y mande un espía" << endl;
+			cout << "Hay un tesoro enemigo en esta casilla, elija otra fila y columna para el Tesoro y mande un espia" << endl;
 		} else if(encontrarEspia(matrizComparar, fila, columna)){
-			cout << "¡OH NO! Colocaste el tesoro donde hay un espía enemigo" << endl;
-			cout << "¡Tu tesoro está siendo robado!" << endl;
+			cout << "¡OH NO! Colocaste el tesoro donde hay un espia enemigo" << endl;
+			cout << "¡Tu tesoro esta siendo robado!" << endl;
 			if (jugador == 1){
 				J1.tesoros-=1;
 				vaciarCasilla(matrizActual, J1.filasTesoros[tesoro-1], J1.columnasTesoros[tesoro-1]);

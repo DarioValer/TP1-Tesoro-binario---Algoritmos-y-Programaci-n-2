@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "funciones.h"
-#include "archivo.cpp"
+//#include "archivo.cpp"
 casilla cDeshabilitada;
 const int TURNOS_DESHABILITADOS = 5;
 

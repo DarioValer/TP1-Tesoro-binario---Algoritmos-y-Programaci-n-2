@@ -9,4 +9,7 @@ typedef struct Jugadores {
 	int tesoros;
 	Jugadores(): filasTesoros(new int[4]), columnasTesoros(new int[4]), filasEspias(new int[200]), columnasEspias(new int[200]), tesoros(4) {}
 }jugador1, jugador2;
+
+extern jugador1 J1;
+extern jugador2 J2;
 #endif // JUGADORES_INCLUDED

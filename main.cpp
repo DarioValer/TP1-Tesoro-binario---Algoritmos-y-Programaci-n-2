@@ -1,8 +1,8 @@
 #include <iostream>
 #include "funciones.h"
 using namespace std;
-jugador1 J1;
-jugador2 J2;
+//jugador1 J1;
+//jugador2 J2;
 const int FILAS = 20;
 const int TESOROS = 4;
 
@@ -26,16 +26,16 @@ int main(){
 					moverTesoro(matriz1, matriz2, jugador, tesoro);	
 				} 
 				//colocar 1er espía
-				cout << "Ingrese dónde quiere colocar su primer Espía" << endl;
+				cout << "Ingrese donde quiere colocar su primer Espia" << endl;
 				colocarEspia(matriz1, matriz2, turno, jugador);
 			} else{
 				//colocar espia
-				cout << "Ingrese dónde quiere colocar el Espía" << endl;
+				cout << "Ingrese donde quiere colocar el Espia" << endl;
 				colocarEspia(matriz1, matriz2, turno, jugador);
 				//MOVER TESORO
 				bool quiereMoverTesoro = validarMoverTesoro();
 				if(quiereMoverTesoro){
-					cout << "Ingrese el número del Tesoro a mover" << endl;
+					cout << "Ingrese el numero del Tesoro a mover" << endl;
 					imprimirTesoros(jugador);
 					int tesoro = asignarTesoro(jugador);
 					vaciarCasilla(matriz1, J1.filasTesoros[tesoro -1], J1.columnasTesoros[tesoro -1]);
@@ -55,16 +55,16 @@ int main(){
 					moverTesoro(matriz2, matriz1, jugador, tesoro);	
 				}
 				//colocar 1er espia
-				cout << "Ingrese dónde quiere colocar su primer Espía" << endl;
+				cout << "Ingrese donde quiere colocar su primer Espia" << endl;
 				colocarEspia(matriz2, matriz1, turno, jugador);
 			} else {
 				//colocar espia
-				cout << "Ingrese dónde quiere colocar el Espía" << endl;
+				cout << "Ingrese donde quiere colocar el Espia" << endl;
 				colocarEspia(matriz2, matriz1, turno, jugador);
 				//mover tesoro
 				bool quiereMoverTesoro = validarMoverTesoro();
 				if(quiereMoverTesoro){
-					cout << "Ingrese el número del Tesoro a mover" << endl;
+					cout << "Ingrese el numero del Tesoro a mover" << endl;
 					imprimirTesoros(jugador);
 					int tesoro = asignarTesoro(jugador);
 					vaciarCasilla(matriz2, J2.filasTesoros[tesoro -1], J2.columnasTesoros[tesoro -1]);
